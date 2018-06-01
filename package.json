@@ -1,0 +1,26 @@
+{
+  "name": "bren",
+  "version": "0.0.1",
+  "description": "Ben's new Brain",
+  "main": "index.js",
+  "dependencies": {
+    "brain.js": "^1.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://benkrichter@bitbucket.org/benkrichter/bren.git"
+  },
+  "keywords": [
+    "ai",
+    "neural network",
+    "brain.js",
+    "javascript"
+  ],
+  "author": "Ben Richter",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/benkrichter/bren#readme"
+}
