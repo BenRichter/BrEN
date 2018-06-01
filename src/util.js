@@ -55,6 +55,8 @@ const encodeData = data => data.map( d => {
  */
 const serialize = data => fixLengths(encodeData(data))
 
+
+
 module.exports = {
   fixLengths:  fixLengths,
   encode:     encode,

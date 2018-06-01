@@ -1,17 +1,25 @@
+// run file: node index.js
+
 const brain = require('brain.js')
+const trainingData  = require('./src/training-data')
+const util = require('./src/util')
 
 const net = new brain.NeuralNetwork()
 
-net.train([
-  {input: [0, 0], output: [0]},
-  {input: [0, 1], output: [1]},
-  {input: [1, 0], output: [1]},
-  {input: [1, 1], output: [0]}
-])
+/**
+ * 1. Train our neural network on training-data
+ */
+net.train(
+  util.serialize(trainingData), {log: true}
+)
 
-const output = net.run([1, 0])  // node index.js >> 0.9365723729133606
+/**
+ * 2. Let's categorize some real data
+ */
+const output = net.run(
+  util.encode('Nothing is not ok')
+)
 
 
 console.log(output)
 
-// Todo: https://medium.com/openmindonline/emotion-detection-with-javascript-neural-networks-5a408f84eb75
