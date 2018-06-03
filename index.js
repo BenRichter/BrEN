@@ -2,7 +2,7 @@
 
 const brain = require('brain.js')
 const trainingData  = require('./src/training-data')
-const util = require('./src/util')
+const { fixLengths, encode, encodeTrainingData } = require('./src/util')
 
 /**
  * 0. Create a neural network
@@ -14,7 +14,8 @@ const net = new brain.NeuralNetwork()
  * 1. Train our neural network on training-data
  */
 net.train(
-  util.serialize(trainingData), {log: true}
+  fixLengths(encodeTrainingData(trainingData)),
+  {log: true}
 )
 
 
@@ -22,7 +23,7 @@ net.train(
  * 2. Let's categorize some real data
  */
 const output = net.run(
-  util.encode('Nothing is not ok')
+  encode('Nothing is not ok')
 )
 
 /**
@@ -30,7 +31,7 @@ const output = net.run(
  */
 // const detectMood = net.toFunction()
 // const output = detectMood(
-//   util.encode('Nothing is not ok')
+//   encode('Nothing is not ok')
 // )
 
 

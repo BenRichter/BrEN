@@ -33,6 +33,12 @@ const fixLengths = data => {
  */
 const encode = string =>  string.split('').map(c => (c.charCodeAt(0) / 255))
 
+
+/**
+ * Encode strings in training data
+ *
+ * @param arr
+ */
 const encodeTrainingData = arr => arr.map(d => (
   {
     input:  encode(d.input),
@@ -41,18 +47,8 @@ const encodeTrainingData = arr => arr.map(d => (
 ))
 
 
-/**
- * Normalize out data for usage
- *
- * @param data
- * @return {*}
- */
-const serialize = data => fixLengths(encodeTrainingData(data))
-
-
-
 module.exports = {
-  fixLengths:  fixLengths,
-  encode:     encode,
-  serialize:  serialize,
+  fixLengths,
+  encode,
+  encodeTrainingData
 }
