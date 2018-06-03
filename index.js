@@ -28,14 +28,12 @@ net.train(
 
 /**
  * 2. Let's categorize some real data
+ *  (b. Use net as a normal function)
  */
 const output = net.run(
   encode('Nothing is not ok')
 )
 
-/**
- * 2b. Use net as a normal function
- */
 // const detectMood = net.toFunction()
 // const output = detectMood(
 //   encode('Nothing is not ok')
