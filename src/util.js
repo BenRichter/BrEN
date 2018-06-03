@@ -5,9 +5,9 @@
  * @param data
  * @return {*}
  */
-const fixLengths = (data) => {
-
+const fixLengths = data => {
   let maxLengthInput = -1;
+
   for (let i = 0; i < data.length; i++) {
     if (data[i].input.length > maxLengthInput) {
       maxLengthInput = data[i].input.length;
@@ -28,23 +28,17 @@ const fixLengths = (data) => {
  * Convert String to Array of float numbers.
  * > Brain.js is better with numeric values. Always encode chars to numbers.
  *
- * @param d
+ * @param string - to be converted
  * @return { Array[] }
  */
-const encode = d => {
-  const encoded = [];
-  d.split('').map(c => {
-    encoded.push((c.charCodeAt(0) / 255))
-  })
-  return encoded
-}
+const encode = string =>  string.split('').map(c => (c.charCodeAt(0) / 255))
 
-const encodeData = data => data.map( d => {
-  return {
+const encodeTrainingData = arr => arr.map(d => (
+  {
     input:  encode(d.input),
     output: d.output
   }
-})
+))
 
 
 /**
@@ -53,7 +47,7 @@ const encodeData = data => data.map( d => {
  * @param data
  * @return {*}
  */
-const serialize = data => fixLengths(encodeData(data))
+const serialize = data => fixLengths(encodeTrainingData(data))
 
 
 
