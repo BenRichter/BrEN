@@ -1,8 +1,8 @@
 // run file: node index.js
 
 const brain = require('brain.js')
-const trainingData  = require('./src/training-data')
-const { fixLengths, encode, encodeTrainingData } = require('./src/util')
+const trainingData  = require('./data')
+const { fixLengths, encode, encodeTrainingData } = require('./util.js')
 
 /**
  * 0. Create a neural network
@@ -11,7 +11,7 @@ const net = new brain.NeuralNetwork()
 
 
 /**
- * 1. Train our neural network on training-data
+ * 1. Train our neural network on training data
  * https://github.com/BrainJS/brain.js#training-options
  */
 net.train(
