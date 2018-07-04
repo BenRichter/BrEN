@@ -18,12 +18,13 @@ const lstm = new brain.recurrent.LSTM();
 
 /**  1. Train */
 const result = lstm.train( trainingData, {
-  iterations: 100,
+  iterations: 500,
   log: true
 });
 
 
-console.log('run 1: Jane' + lstm.run('Jane'));
-console.log('run 2: Doug' + lstm.run('Doug'));
-console.log('run 3: Spot' + lstm.run('Spot'));
-console.log('run 4: It' + lstm.run('It'));
+/** Complete the sentences */
+console.log('Jane...' + lstm.run('Jane'));
+console.log('Doug...' + lstm.run('Doug'));
+console.log('Spot...' + lstm.run('Spot'));
+console.log('It...' + lstm.run('It'));
