@@ -13,7 +13,22 @@ const happy = [
   {
     input: "What a good day!",
     output: {happy: 1}
-  }
+  },
+
+  {
+    input: "Amazing!",
+    output: {happy: 1}
+  },
+
+  {
+    input: "Great to see you",
+    output: {happy: 1}
+  },
+
+  {
+    input: "Great to see you",
+    output: {happy: 1}
+  },
 
 ]
 

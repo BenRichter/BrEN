@@ -13,7 +13,17 @@ const sad = [
   {
     input: "Such a bad day",
     output: {sad: 1}
-  }
+  },
+
+  {
+    input: "Fuck fucking fuck",
+    output: {sad: 1}
+  },
+
+  {
+    input: "Go away",
+    output: {sad: 1}
+  },
 
 ]
 

@@ -1,17 +1,17 @@
-// run file: node index.js
-
+/**
+ * NeuralNetwork :: standard network with backpropagation, need numbered same size input
+ * > node ./src/1_mood-detector
+ */
 const brain = require('brain.js')
 const trainingData  = require('./data')
 const { fixLengths, encode, encodeTrainingData } = require('./util.js')
 
-/**
- * 0. Create a neural network
- */
+/** 1. Create a neural network */
 const net = new brain.NeuralNetwork()
 
 
 /**
- * 1. Train our neural network on training data
+ * 2. Train our neural network on training data
  * https://github.com/BrainJS/brain.js#training-options
  */
 net.train(
@@ -27,11 +27,11 @@ net.train(
 
 
 /**
- * 2. Let's categorize some real data
+ * 3. Let's categorize some real data
  *  (b. Use net as a normal function)
  */
 const output = net.run(
-  encode('Nothing is not ok')
+  encode('Everything goes to shit')
 )
 
 // const detectMood = net.toFunction()
@@ -44,7 +44,7 @@ console.log(output)
 
 
 /**
- * (3. Save and Export Net)
+ * [4. Save and Export Net]
  * a. via JSON
  * b. as standalone function without brain.js
  */
