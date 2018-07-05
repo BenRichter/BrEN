@@ -1,4 +1,7 @@
-// run file: node index.js
+/**
+ * Remember things and retain by reference
+ * > node ./src/3_association
+ */
 
 const brain = require('brain.js')
 
@@ -10,13 +13,11 @@ const trainingData = [
   'It was love at first sight, and Spot had a frontrow seat. It was a very special moment for all.'
 ];
 
-/**
- * 0. Net with Long short-term memory
- */
+// 1. Create Net with Long short-term memory
 const lstm = new brain.recurrent.LSTM();
 
 
-/**  1. Train */
+// 2. Train
 const result = lstm.train( trainingData, {
   iterations: 500,
   log: true

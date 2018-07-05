@@ -5,7 +5,7 @@ https://github.com/BrainJS/brain.js
 Install all dependencies `npm install`, then run with node:
 
 ```
-node .\src\1_mood-detector
+node ./src/1_mood-detector
 ```
 
 ### On Normalisation
