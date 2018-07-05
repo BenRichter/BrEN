@@ -1,10 +1,10 @@
 {
   "name": "bren",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "Ben's new Brain",
   "main": "index.js",
   "dependencies": {
-    "brain.js": "^1.2.1"
+    "brain.js": "^1.2.2"
   },
   "devDependencies": {},
   "scripts": {

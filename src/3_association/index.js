@@ -1,8 +1,7 @@
 /**
- * Remember things and retain by reference
+ * LSTM :: Remember things and retain by reference, fuzzy filter, strings allowed
  * > node ./src/3_association
  */
-
 const brain = require('brain.js')
 
 
@@ -18,7 +17,7 @@ const lstm = new brain.recurrent.LSTM();
 
 
 // 2. Train
-const result = lstm.train( trainingData, {
+lstm.train( trainingData, {
   iterations: 500,
   log: true
 });
